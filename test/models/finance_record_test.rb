@@ -9,16 +9,19 @@ class FinanceRecordTest < ActiveSupport::TestCase
      record.should respond_to 'description'
      record.should respond_to 'expense?'
      record.should respond_to 'multiplier'
+     record.should respond_to 'processed'
    end
 
    test "should respond to scope methods" do
       FinanceRecord.should respond_to 'from_date'
       FinanceRecord.should respond_to 'to_date'
+      FinanceRecord.should respond_to 'sum_processed'
+      FinanceRecord.should respond_to 'sum_unprocessed'
    end
    
    test "should only return records from a given date" do
       finance_records = FinanceRecord.from_date(Date.new(2000,1,1))
-      finance_records.should have(3).items
+      finance_records.should have(4).items
       finance_records[0].date.should > Date.new(2000-1-1)
    end
 
@@ -38,5 +41,15 @@ class FinanceRecordTest < ActiveSupport::TestCase
    test "multiplier should be 1 for incomes" do
      finance_record = FinanceRecord.find_by_description('Salary')
      finance_record.multiplier.should eq 1
+   end
+
+   test "should sum only processed records" do
+      sum = FinanceRecord.sum_processed
+      sum.should eq 466.0
+   end
+
+    test "should sum only unprocessed records" do
+      sum = FinanceRecord.sum_unprocessed
+      sum.should eq 1000.00
    end
 end

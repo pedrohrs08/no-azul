@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140130204707) do
+ActiveRecord::Schema.define(version: 20140131144700) do
 
   create_table "finance_records", force: true do |t|
     t.string   "description"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140130204707) do
     t.boolean  "expense"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "processed"
   end
 
 end
