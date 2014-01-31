@@ -17,6 +17,10 @@ class FinanceRecordTest < ActiveSupport::TestCase
       FinanceRecord.should respond_to 'to_date'
       FinanceRecord.should respond_to 'sum_processed'
       FinanceRecord.should respond_to 'sum_unprocessed'
+      FinanceRecord.should respond_to 'processed'
+      FinanceRecord.should respond_to 'unprocessed'
+      FinanceRecord.should respond_to 'expenses'
+      FinanceRecord.should respond_to 'incomes'
    end
    
    test "should only return records from a given date" do
@@ -48,8 +52,50 @@ class FinanceRecordTest < ActiveSupport::TestCase
       sum.should eq 466.0
    end
 
-    test "should sum only unprocessed records" do
+   test "should sum only unprocessed records" do
       sum = FinanceRecord.sum_unprocessed
       sum.should eq 1000.00
+   end
+
+   test "should only return expenses records" do
+       FinanceRecord.expenses.each do |finance_record|
+          finance_record.expense?.should be_true
+       end
+   end
+
+   test "should only return income records" do
+       FinanceRecord.incomes.each do |finance_record|
+          finance_record.expense?.should be_false
+       end
+   end
+
+   test "should only return processed records" do
+       FinanceRecord.processed.each do |finance_record|
+          finance_record.processed?.should be_true
+       end
+   end
+
+   test "should only return unprocessed records" do
+       FinanceRecord.unprocessed.each do |finance_record|
+          finance_record.processed?.should be_false
+       end
+   end
+
+   test "should not be valid if description is blank" do
+        finance_record = FinanceRecord.all.first
+        finance_record.description = nil
+        finance_record.should_not be_valid
+   end
+
+   test "should not be valid if date is blank" do
+        finance_record = FinanceRecord.all.first
+        finance_record.date = nil
+        finance_record.should_not be_valid
+   end
+
+   test "should not be valid if value is blank" do
+        finance_record = FinanceRecord.all.first
+        finance_record.value = nil
+        finance_record.should_not be_valid
    end
 end
