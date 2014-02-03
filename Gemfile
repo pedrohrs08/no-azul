@@ -8,6 +8,9 @@ group :deployment do
 	gem 'sqlite3', :platform => [:ruby, :mswin, :mingw]
 end
 
+group :test do
+	gem 'rake'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
