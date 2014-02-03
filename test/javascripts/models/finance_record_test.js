@@ -28,4 +28,14 @@ asyncTest("Should fetch finance record from server based on its id", function(){
         equal(user.get("value"),10.00,"value doesnt match");
         start();
 	}});
-})
+});
+
+test("Should validate finance record", function(){
+    equal(this.financeRecord.isValid(),false,"record should not be valid");
+    equal(this.financeRecord.validationError,"Description must be set");
+    this.financeRecord.set({description: "Mock description"});
+    equal(this.financeRecord.isValid(),false,"record should not be valid");
+    equal(this.financeRecord.validationError,"Value must be greater than 0");
+    this.financeRecord.set({value: 10.00});
+    equal(this.financeRecord.isValid(),true,"record should be valid");
+});
