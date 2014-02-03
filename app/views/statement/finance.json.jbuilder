@@ -1,1 +1,1 @@
-json.extract! @finance, :id, :description
+json.(@finance, :id, :description, :expense, :processed,:value)

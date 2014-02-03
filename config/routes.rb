@@ -1,6 +1,6 @@
 NoAzul::Application.routes.draw do
-  get 'finances' => 'statement#finances'
-  get 'finance/:id' => 'statement#finance'
+  get 'finances' => 'statement#finances', defaults: {format: :json}
+  get 'finance/:id' => 'statement#finance', defaults: {format: :json}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

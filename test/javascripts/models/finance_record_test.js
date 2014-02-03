@@ -19,10 +19,13 @@ test("Finance Record should have the following default values", function(){
 });
 
 asyncTest("Should fetch finance record from server based on its id", function(){
-	expect(1);
+	expect(4);
 	this.financeRecord.set({ id: 1 });
 	this.financeRecord.fetch({ success: function(user){
         equal(user.get("description"), "Supermarket", "description doesnt match with the server");
+        equal(user.get("expense"),true,"expense status doesnt match");
+        equal(user.get("processed"),true,"processed status doesnt match");
+        equal(user.get("value"),10.00,"value doesnt match");
         start();
 	}});
 })

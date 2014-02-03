@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class StatementControllerTest < ActionController::TestCase
+
+   def setup
+     request.headers["Accept"] = "application/json"
+   end
+
    test "should not get finance records if no parameter is passed" do
      get :finances
      assigns[:finances].should be_nil
