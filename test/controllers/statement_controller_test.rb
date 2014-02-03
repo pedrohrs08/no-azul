@@ -24,4 +24,10 @@ class StatementControllerTest < ActionController::TestCase
    	  finance.date.should >= Date.new(1999,01,01)
    	end
    end
+
+   test "should get finance record based on its id" do
+     get :finance, {"id" => "1"}
+     assigns[:finance].should_not be_nil
+     assigns[:finance].id.should eq 1
+   end
 end
