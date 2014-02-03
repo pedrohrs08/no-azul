@@ -1,0 +1,1 @@
+var FinanceRecord = Backbone.Model.extend({urlRoot: "/financeRecord"});
