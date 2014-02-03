@@ -11,6 +11,7 @@ end
 group :test do
 	gem 'rake'
 end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
