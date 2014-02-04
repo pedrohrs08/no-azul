@@ -4,9 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-group :deployment do
-	gem 'sqlite3', :platform => [:ruby, :mswin, :mingw]
-end
+gem 'sqlite3', :platform => [:ruby, :mswin, :mingw]
+
 
 group :test do
 	gem 'rake'
