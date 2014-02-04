@@ -5,12 +5,9 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', :platform => [:ruby, :mswin, :mingw]
-
-
-group :test do
-	gem 'rake'
-end
-
+gem 'jasmine'
+gem 'rake'
+gem 'phantomjs'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -42,7 +39,6 @@ end
 
 group :development, :test do
   gem 'rspec-expectations'
-  gem 'qunit-rails'
 end
 
 # Use ActiveModel has_secure_password
