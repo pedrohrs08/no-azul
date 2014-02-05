@@ -1,5 +1,7 @@
 {<img src="https://travis-ci.org/pedrohrs08/no-azul.png?branch=master" alt="Build Status" />}[https://travis-ci.org/pedrohrs08/no-azul]
 
+{<img src="https://coveralls.io/repos/pedrohrs08/no-azul/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/pedrohrs08/no-azul?branch=master]
+
 == README
 
 This README would normally document whatever steps are necessary to get the
