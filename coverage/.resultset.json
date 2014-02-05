@@ -1,0 +1,48 @@
+{
+  "RSpec": {
+    "coverage": {
+      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/controllers/statement_controller.rb": [
+        1,
+        1,
+        1,
+        4,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/models/finance_record.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        null
+      ]
+    },
+    "timestamp": 1391620407
+  }
+}
