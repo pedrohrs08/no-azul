@@ -13,6 +13,7 @@ gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'coveralls', require: false
 gem 'simplecov', require: false
+gem 'jslint_on_rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
