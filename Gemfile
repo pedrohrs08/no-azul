@@ -8,6 +8,9 @@ gem 'sqlite3', :platform => [:ruby, :mswin, :mingw]
 gem 'jasmine'
 gem 'rake'
 gem 'phantomjs'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
