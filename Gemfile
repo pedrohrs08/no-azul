@@ -11,6 +11,7 @@ gem 'phantomjs'
 gem 'rspec'
 gem 'rspec-rails'
 gem 'factory_girl_rails'
+gem 'coveralls', require: false
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
