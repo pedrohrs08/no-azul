@@ -10,7 +10,7 @@ describe("FinanceRecord", function(){
     });
 
 it("Finance Record model url should point to financeRecord endpoint", function(){
-    expect(financeRecord.url()).toEqual("/finance");
+    expect(financeRecord.url()).toEqual("/finances");
 });
     
 it("Finance Record should have the following default values", function(){

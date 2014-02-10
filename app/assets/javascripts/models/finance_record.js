@@ -1,9 +1,11 @@
-var FinanceRecord = Backbone.Model.extend({urlRoot: "/finance",
-  defaults: {
-    value: 0,
-    expense: true,
-    processed: false,
-    description: ""
+var FinanceRecord = Backbone.Model.extend({urlRoot: "/finances",
+  defaults: function() {
+    return {
+      value: 0,
+      expense: true,
+      processed: false,
+      description: ""
+   }; 
   },
   validate: function(attributes){
     if(attributes.description === ""){

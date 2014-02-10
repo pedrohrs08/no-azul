@@ -4,7 +4,8 @@ window.NoAzul = {
   Views: {},
   Routers: {},
   initialize: function() {
- // alert('Hello from Backbone!');
+   var router = new Router();
+   Backbone.history.start();
   }
 };
 

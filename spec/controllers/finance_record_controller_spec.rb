@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe StatementController do
+describe FinanceRecordController do
    before(:each) do
-      create(:finance_record, date: Date.new(1999,1,1), id: 1)
+     @finance_record_1 = create(:finance_record, date: Date.new(1999,1,1), id: 1)
       create(:finance_record, date: Date.new(2000,1,1), id: 2)
       create(:finance_record, date: Date.new(2001,1,1), id: 3)
       request.headers["Accept"] = "application/json"
@@ -36,5 +36,13 @@ describe StatementController do
      get :finance, {"id" => "1"}
      assigns[:finance].should_not be_nil
      assigns[:finance].id.should eq 1
+   end
+
+   it "should update finance record" do
+     patch :update, id: 1, finance_record: {description: "two"}
+   end
+
+   it "should not update record" do
+     patch :update, id: 1, finance_record: {description: "" }
    end
 end

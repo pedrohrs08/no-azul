@@ -1,11 +1,12 @@
 NoAzul::Application.routes.draw do
-  get 'finances' => 'statement#finances', defaults: {format: :json}
-  get 'finance/:id' => 'statement#finance', defaults: {format: :json}
+  get 'finances' => 'finance_record#finances', defaults: {format: :json}
+  get 'finances/:id' => 'finance_record#finance', defaults: {format: :json}
+  patch 'finances/:id' => 'finance_record#update', defaults: {format: :json}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'finance_record#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

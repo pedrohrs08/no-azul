@@ -1,1 +1,0 @@
-json.(@finance, :id, :description, :expense, :processed,:value)

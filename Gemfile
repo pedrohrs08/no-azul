@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
 gem 'underscore-rails'
+gem 'ejs'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
