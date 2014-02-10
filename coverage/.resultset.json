@@ -1,15 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/helpers/application_helper.rb": [
+      "/home/pedro/ror_projects/no-azul/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/helpers/finance_record_helper.rb": [
+      "/home/pedro/ror_projects/no-azul/app/helpers/finance_record_helper.rb": [
         1,
         null
       ],
-      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/controllers/finance_record_controller.rb": [
+      "/home/pedro/ror_projects/no-azul/app/controllers/finance_record_controller.rb": [
         1,
         1,
         1,
@@ -44,14 +44,14 @@
         null,
         null
       ],
-      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/controllers/application_controller.rb": [
+      "/home/pedro/ror_projects/no-azul/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "C:/Users/AC-PEDRO/ror_exampls/NoAzul/app/models/finance_record.rb": [
+      "/home/pedro/ror_projects/no-azul/app/models/finance_record.rb": [
         1,
         1,
         1,
@@ -72,6 +72,6 @@
         null
       ]
     },
-    "timestamp": 1392052729
+    "timestamp": 1392058331
   }
 }

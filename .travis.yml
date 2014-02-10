@@ -3,9 +3,4 @@ rvm:
  - "1.9.3"
  - "2.0.0"
 script: 
- - "RAILS_ENV=test bundle exec rake db:create"
- - "RAILS_ENV=test bundle exec rake db:migrate"
- - "RAILS_ENV=test bundle exec rake db:test:prepare"
- - "RAILS_ENV=test bundle exec rake jslint"
- - "RAILS_ENV=test bundle exec rake spec"
- - "RAILS_ENV=test bundle exec rake jasmine:ci"
+ - "RAILS_ENV=test bundle exec rake build"
