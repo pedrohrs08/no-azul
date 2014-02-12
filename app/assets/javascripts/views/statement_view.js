@@ -6,7 +6,7 @@ var StatementView = Backbone.View.extend({
 		$("#myModal").draggable({
           cursor: "crosshair"
         });
-        this.$el.append(JST["finance_records"]({date: "Date", description: "Description", value: "Value"}));
+        this.$el.append(JST.finance_records({date: "Date", description: "Description", value: "Value"}));
 	},
 	render: function () {
 	 _.each(this.model.models,function(financeRecord){
