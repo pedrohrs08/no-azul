@@ -1,35 +1,11 @@
 // Place all the styles related to the Statement controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.statement {
-   border: 1px solid black;
-   border-radius: 10px;
-   padding: 0px;	
-   display:block;
-   float:left;
-   width:100%;
-}
-
-.finance-record {
-	border-bottom: 1px solid black;
-    display:block;
-    float:left;
-	clear:left;
-	width:100%;
-}
 
 .finance-record-processed {
 	font-weight:bold;
 }
 
-.finance-record div {
-   margin-left: 5px;
-   margin-right: 5px;
-   border-right: 1px solid black;
-   float:left;
-   display:block;
-   padding:5px;
-}
 .finance-record-expense {
 	color: red;
 }

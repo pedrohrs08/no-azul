@@ -1,5 +1,5 @@
 var FinanceRecordView = Backbone.View.extend({
-	tagName: 'div',
+	tagName: 'tr',
 	events: {
       'click' : 'toogleModel'
 	},
