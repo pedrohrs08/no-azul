@@ -1,7 +1,7 @@
 var FinanceRecordView = Backbone.View.extend({
 	tagName: 'tr',
 	events: {
-      'click' : 'toogleModel'
+      'click .process' : 'toogleModel'
 	},
 	className: function(){
 		str_class = 'finance-record';
@@ -16,7 +16,7 @@ var FinanceRecordView = Backbone.View.extend({
 		return this;
 	},
 	toogleModel: function(){
-		this.model.set({expense: !this.model.get("expense")});
+		this.model.set({processed: !this.model.get("processed")});
 		this.model.save(this.model.attributes,{patch:true});
 		this.render();
 	}

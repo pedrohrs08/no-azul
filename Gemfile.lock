@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    accountingjs-rails (0.0.4)
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
       mail (~> 2.5.3)
@@ -86,6 +87,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
+    momentjs-rails (2.5.1)
+      railties (>= 3.1)
     multi_json (1.8.4)
     pg (0.17.1)
     phantomjs (1.9.2.1)
@@ -178,6 +181,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  accountingjs-rails
   backbone-on-rails
   bootstrap-sass (~> 3.1.0)
   coffee-rails (~> 4.0.0)
@@ -189,6 +193,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   jslint_on_rails
+  momentjs-rails
   pg
   phantomjs
   rails (= 4.0.0)

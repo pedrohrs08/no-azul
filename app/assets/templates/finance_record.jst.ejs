@@ -1,4 +1,14 @@
 <td><input type="checkbox" value="<%= id %>" /></td>
-<td><%= date %></td>
+<td><%= moment(date).format('DD/MM/YYYY')  %></td>
 <td><%= description %></td>
-<td><%= value %></td>
+<td><%= accounting.formatMoney(value,"R$", 2, ".", ",") %></td>
+<td><% if(processed) { %>
+    <span class="label label-primary process">
+        <span class="glyphicon glyphicon-check" />
+    </span>
+    <% } else { %>
+    <span class="label label-default process">
+        <span class="glyphicon glyphicon-unchecked" />
+    </span>
+    <% } %>
+</td>

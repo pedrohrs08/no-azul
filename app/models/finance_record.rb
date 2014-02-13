@@ -15,4 +15,5 @@ class FinanceRecord < ActiveRecord::Base
 	scope :unprocessed, ->{where('processed = ?', false)}  
 	scope :from_date, ->(date){ where('date >= ?', date)}
 	scope :to_date, ->(date){ where('date <= ?', date)}
+	default_scope { order("date, id ASC") }
 end

@@ -10,6 +10,8 @@ gem 'rake'
 gem 'phantomjs'
 gem 'rspec'
 gem 'rspec-rails'
+gem 'momentjs-rails'
+gem 'accountingjs-rails'
 gem 'factory_girl_rails'
 gem 'coveralls', require: false
 gem 'simplecov', require: false

@@ -18,6 +18,8 @@
 //= require backbone
 //= require no_azul
 //= require sinon
+//= require moment
+//= require accountingjs
 //= require jquery.ui.all
 //= require_tree ../templates
 //= require_tree ./models

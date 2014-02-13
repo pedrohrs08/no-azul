@@ -1,5 +1,5 @@
 var ModalView = Backbone.View.extend({
-	 className: 'test',
+	 className: 'modal',
 	 id: 'myModal',
 	 events: {
        'click .close' : 'closeModal'
@@ -12,7 +12,9 @@ var ModalView = Backbone.View.extend({
 	modalTemplate: JST.modal_template, 
 	render: function(){
 		this.$el.html(this.modalTemplate({title: this.model.title, heading: this.model.heading}));
+		this.$el.hide();
 		this.$("#body").append(this.model.view.render().el);
+		this.$el.show("scale");
 		return this;
 	},
 	closeModal: function () {
