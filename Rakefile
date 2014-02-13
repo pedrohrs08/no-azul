@@ -6,6 +6,6 @@ require 'jslint'
 require 'jslint/tasks'
 NoAzul::Application.load_tasks
 
-task :build => ['db:drop','db:create', 'db:migrate', 'db:test:prepare' ,'jslint','jasmine:ci','spec', 'db:drop'] do |t|
+task :build => ['db:migrate', 'db:test:prepare' ,'jslint','jasmine:ci','spec'] do |t|
 	puts "Build Successfull"	
 end

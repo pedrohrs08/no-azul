@@ -19,8 +19,7 @@ test:
   database: no_azul_test
   pool: 5
   timeout: 5000
-  username: pedro
-  password: bped123
+  username: postgres
 
 production:
   adapter: postgresql
