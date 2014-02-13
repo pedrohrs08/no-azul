@@ -15,5 +15,8 @@
 /log/*.log
 /tmp
 
-/coverage/*
+/coverage
+/coverage/*.json
 /*.lock
+
+/public/assets

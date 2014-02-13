@@ -5,7 +5,7 @@ window.NoAzul = {
   Routers: {},
   initialize: function() {
    var router = new Router();
-   Backbone.history.start();
+   Backbone.history.start({pushState: true});
   }
 };
 

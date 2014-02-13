@@ -3,9 +3,6 @@ var StatementView = Backbone.View.extend({
 	className: 'table',
 	initialize: function(){
 		this.model.bind("reset", this.render, this);
-		$("#myModal").draggable({
-          cursor: "crosshair"
-        });
         this.$el.append(JST.finance_records({date: "Date", description: "Description", value: "Value"}));
 	},
 	render: function () {

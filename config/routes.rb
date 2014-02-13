@@ -2,6 +2,7 @@ NoAzul::Application.routes.draw do
   get 'finances' => 'finance_record#finances', defaults: {format: :json}
   get 'finances/:id' => 'finance_record#finance', defaults: {format: :json}
   patch 'finances/:id' => 'finance_record#update', defaults: {format: :json}
+  get 'finance-records' => 'finance_record#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
