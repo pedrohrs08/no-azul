@@ -2,6 +2,7 @@ class FinanceRecord < ActiveRecord::Base
     validates :description, presence: true
     validates :date, presence: true
     validates :value, presence: true
+    sequence_name = "finance_records_id_seq"
 
 	def multiplier
 		expense? ? -1 : 1

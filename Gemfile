@@ -20,6 +20,8 @@ gem 'sinon-rails'
 gem 'bootstrap-sass', '~> 3.1.0'
 gem 'jquery-ui-rails'
 gem 'rails_12factor', group: :production
+gem 'maskedinput-rails'
+gem 'maskmoney-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

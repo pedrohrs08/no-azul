@@ -12,11 +12,13 @@ var Router = Backbone.Router.extend({
 	financeRecords: function(){
        this.financeRecords = new FinanceRecords();
        this.financeRecordsView = new StatementView({model: this.financeRecords});
+       this.financeRecordsFormView = new FinanceRecordFormView();
        this.financeRecords.fetch({data: {from: '1999-1-1',to: '2013-1-1'},reset:true});
        this.model = {
 			title: "This is your monthly statement",
 			heading: "Statement List",
-			view: this.financeRecordsView
+			view: this.financeRecordsView,
+			addView: this.financeRecordsFormView
        };
        this.modal = new ModalView({model: this.model});
        $("body").append(this.modal.render().el);		

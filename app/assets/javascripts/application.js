@@ -20,6 +20,8 @@
 //= require sinon
 //= require moment
 //= require accountingjs
+//= require maskedinput
+//= require maskmoney
 //= require jquery.ui.all
 //= require_tree ../templates
 //= require_tree ./models
