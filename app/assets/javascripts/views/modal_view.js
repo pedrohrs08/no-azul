@@ -13,8 +13,9 @@ var ModalView = Backbone.View.extend({
 	 },
 	modalTemplate: JST.modal_template, 
 	render: function(){
+		this.model.addView.remove();
 		this.$el.html(this.modalTemplate({title: this.model.title, heading: this.model.heading}));
-		this.$("#body").append(this.model.view.render().el);
+		this.$("#content").html(this.model.view.render().el);
 		this.$('#footer').html(JST.list_footer_buttons());
 		return this;
 	},
@@ -24,7 +25,7 @@ var ModalView = Backbone.View.extend({
 	},
 	triggerAdd: function() {
 		this.model.view.remove();
-		this.$("#body").append(this.model.addView.render().el);
+		this.$("#content").html(this.model.addView.render().el);
 		this.$('#footer').html(JST.form_footer_buttons());
 		return this;
 	}

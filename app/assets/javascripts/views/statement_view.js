@@ -6,6 +6,7 @@ var StatementView = Backbone.View.extend({
         this.$el.append(JST.finance_records({date: "Date", description: "Description", value: "Value"}));
 	},
 	render: function () {
+	   this.$el.html("");
 	 _.each(this.model.models,function(financeRecord){
 		var financeRecordView = new FinanceRecordView({model: financeRecord});
 		this.$el.append(financeRecordView.render().el);
